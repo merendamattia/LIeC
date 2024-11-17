@@ -7,7 +7,7 @@ on:
       - master
       - seminario
     paths:
-      - 'teoria/'
+      - 'teoria/*'
 
 jobs:
   converttohtml:
