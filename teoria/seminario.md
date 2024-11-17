@@ -44,6 +44,7 @@ Per abilitare questa funzionalità dei bridge lock and mint, la comunicazione ba
 Quindi ricapitolando, un bridge cross-chain può essere diviso in tre parti: source chain, cross-chain relayer e destination chain. Inoltre, il bridge cross-chain "deploya" gli smart contract sulla source chain e sulla destination chain.
 
 # Sezione 2: vulnerabilità cross-chain
+> Parlare delle vulnerabilità descritte da SmartAxe
 
 # Sezione 3: SmartAxe - un primo case study
 
