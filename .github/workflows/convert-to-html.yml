@@ -6,8 +6,7 @@ on:
       - main
       - master
     paths:
-      - 'teoria/**.md'
-      - 'teoria/images/**'
+      - 'teoria/'
 
 jobs:
   converttohtml:
