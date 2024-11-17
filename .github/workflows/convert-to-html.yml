@@ -8,6 +8,7 @@ on:
       - seminario
     paths:
       - 'teoria/**.md'
+      - 'teoria/images/**'
 
 jobs:
   converttohtml:
