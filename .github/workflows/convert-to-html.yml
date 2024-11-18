@@ -78,15 +78,28 @@ jobs:
           name: docs-html
           path: artifacts
 
-      - name: Commit and Push artifacts
+      - name: Create a new branch and commit changes
         run: |
           git pull
+
+          BRANCH_NAME="update-files-$(date +%s)"
+          git checkout -b $BRANCH_NAME
+
           git add artifacts/
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Add generated artifacts [HTML]"
-            git push
-          fi
+          git commit -m "Add generated artifacts [HTML]"
+
+          git push origin $BRANCH_NAME
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update files via GitHub Actions"
+          title: "Automated Update: Files Update"
+          body: |
+            This pull request has been automatically created by a GitHub Action.
+            It includes the following updates:
+            - File modifications
+          branch: ${{ github.ref_name }} # Nome del branch principale da cui parte il PR
