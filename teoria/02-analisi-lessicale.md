@@ -74,4 +74,4 @@ Per lo standard C++11 e successivi:
 - corretto: `std::vector<std::list<int> >`
 - corretto: `std::vector<std::list<int>>`
 
-test
+testc
