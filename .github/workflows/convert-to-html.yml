@@ -26,6 +26,9 @@ jobs:
             find teoria/images -type f -name "*.gif" -exec cp {} teoria/images/ \;
             find teoria/images -type f -name "*.svg" -exec cp {} teoria/images/ \;
             ls -la teoria/images
+            mkdir tmp
+            chmod +x tmp
+            chmod +w tmp
       
       - name: Preprocess Obsidian Markdown
         run: |
