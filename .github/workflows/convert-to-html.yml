@@ -86,14 +86,14 @@ jobs:
       - name: Create a new branch and commit changes
         run: |
           git pull
+          git restore teoria/
 
-          BRANCH_NAME="update-files-$(date +%s)"
-          git checkout -b $BRANCH_NAME
+          git checkout -b temp-branch
 
           git add artifacts/
           git commit -m "Add generated artifacts [HTML]"
 
-          git push origin $BRANCH_NAME
+          git push origin temp-branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
@@ -101,10 +101,11 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          branch: temp-branch
           commit-message: "Update files via GitHub Actions"
           title: "Automated Update: Files Update"
           body: |
             This pull request has been automatically created by a GitHub Action.
             It includes the following updates:
             - File modifications
-          branch: ${{ github.ref_name }} # Nome del branch principale da cui parte il PR
+          
