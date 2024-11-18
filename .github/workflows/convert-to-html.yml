@@ -54,6 +54,7 @@ jobs:
           ls -la tmp
           mkdir -p artifacts/html
           cp tmp/*.html artifacts/html/ || echo "No HTML files to copy"
+          rm -rf tmp/
           ls -la artifacts/html
         
       - name: Copy images for HTML files
