@@ -43,7 +43,7 @@ Per abilitare questa funzionalità dei bridge lock and mint, la comunicazione ba
 
 Quindi ricapitolando, un bridge cross-chain può essere diviso in tre parti: source chain, cross-chain relayer e destination chain. Inoltre, il bridge cross-chain "deploya" gli smart contract sulla source chain e sulla destination chain.
 
-# Sezione 2: vulnerabilità cross-chain
+# Sezione 2: Vulnerabilità cross-chain
 Esistono diverse superfici di attacco dei bridge cross-chain. I più famosi sono:
 Lato server:
 1. Front-end phishing: riguarda il cross-chain relayer. Se un aggressore ottiene l'accesso al front-end dei bridge, può ingannare gli utenti inducendoli a trasferire i loro fondi, con conseguente furto dei fondi degli utenti.
