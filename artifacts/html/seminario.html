@@ -1105,7 +1105,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 	</head>
 	<body>
 		<nav id="table-of-contents">
-			<ul><li><a href="#symposium"> Symposium</a></li><li><a href="#introduzione"> Introduzione</a></li><li><a href="#sezione-1-funzionamento-dei-bridge"> Sezione 1: Funzionamento dei bridge</a><ul><li><a href="#lock-and-mint-bridge"> Lock and Mint bridge</a></li></ul></li><li><a href="#sezione-2-vulnerabilit%C3%A0-cross-chain"> Sezione 2: vulnerabilità cross-chain</a></li><li><a href="#sezione-3-smartaxe---un-primo-case-study"> Sezione 3: SmartAxe - un primo case study</a></li><li><a href="#conclusioni"> Conclusioni</a></li></ul>
+			<ul><li><a href="#symposium"> Symposium</a></li><li><a href="#introduzione"> Introduzione</a></li><li><a href="#sezione-1-funzionamento-dei-bridge"> Sezione 1: Funzionamento dei bridge</a><ul><li><a href="#lock-and-mint-bridge"> Lock and Mint bridge</a></li></ul></li><li><a href="#sezione-2-vulnerabilit%C3%A0-cross-chain"> Sezione 2: vulnerabilità cross-chain</a></li><li><a href="#sezione-3-smartaxe---un-primo-case-study"> Sezione 3: SmartAxe - un primo case study</a><ul><li><a href="#valutazione-sperimentale"> Valutazione sperimentale</a></li></ul></li><li><a href="#conclusioni"> Conclusioni</a></li></ul>
 		</nav>
 		<main>
 			<hr>
@@ -1124,8 +1124,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 <p>In parole povere, una blockchain è un registro digitale decentralizzato che registra le transazioni su una rete di computer. La kill-feature della blockchain risiede nella sua natura trasparente e a prova di manomissione, che consente transazioni peer-to-peer sicure senza la necessità di intermediari come banche o governi.</p>
 <p>Ma ecco il punto: non tutte le blockchain sono create uguali. Infatti, ci sono molte diverse piattaforme blockchain, ognuna con le proprie caratteristiche e casi d'uso unici. Ad esempio, Ethereum è una popolare piattaforma blockchain che consente agli sviluppatori di distribuire smart contract, programmi che si eseguono in modo autonomo quando si verifica una determinata condizione.</p>
 <p>Poiché questi contratti sono archiviati su una blockchain, sono anche immutabili, il che significa che una volta distribuiti, non possono essere modificati o eliminati.</p>
-<p>Ora, questa immutabilità è sia un vantaggio che uno svantaggio. Da un lato, significa che i contratti intelligenti possono fornire un elevato livello di fiducia e garanzia per le parti coinvolte in una transazione. Ma dall'altro lato, significa anche che eventuali errori o bug in questi contratti possono avere conseguenze di vasta portata: dopotutto, se un contratto intelligente contiene un errore logico, potrebbe potenzialmente portare a significative perdite finanziarie o danni alla reputazione.</p>
-<p>Ecco perché la sicurezza è un aspetto così critico nello sviluppo di contratti intelligenti. Quando si distribuisce un contratto intelligente su una blockchain come Ethereum, gli sviluppatori devono essere assolutamente certi che il loro codice sia privo di errori e bug, altrimenti le conseguenze potrebbero essere gravi.</p>
+<p>Ora, questa immutabilità è sia un vantaggio che uno svantaggio. Da un lato, significa che gli smart contract possono fornire un elevato livello di fiducia e garanzia per le parti coinvolte in una transazione. Ma dall'altro lato, significa anche che eventuali errori o bug in questi contratti possono avere conseguenze di vasta portata: dopotutto, se un contratto intelligente contiene un errore logico, potrebbe potenzialmente portare a significative perdite finanziarie o danni alla reputazione.</p>
+<p>Ecco perché la sicurezza è un aspetto così critico nello sviluppo dgli smart contract. Quando si distribuisce un contratto intelligente su una blockchain come Ethereum, gli sviluppatori devono essere assolutamente certi che il loro codice sia privo di errori e bug, altrimenti le conseguenze potrebbero essere gravi.</p>
 <p>Una delle sfide significative nel lavorare con più reti blockchain è l'incapacità di trasferire in modo nativo asset tra di loro. Se hai un asset, come Ether (ETH) su Ethereum, non puoi semplicemente spostarlo ad un'altra blockchain, come la rete di Solana. Questo perché ogni blockchain ha la propria tecnologia e infrastruttura sottostante unica, rendendo impossibile il trasferimento diretto.</p>
 <p>Per risolvere questo problema, sono stati introdotti gli smart contract cross-chain, detti anche <em>bridge</em>, noti come soluzione di interoperabilità, per facilitare il movimento di asset tra blockchain. I bridge fungono da intermediario, consentendo agli utenti di convertire i propri asset in un formato standardizzato che può essere trasferito su diverse reti blockchain.</p>
 <p>Questa soluzione offre nuove grandi possibilità, ma anche grandi responsabilità, in quanto la posta in gioco è più alta che mai.</p>
@@ -1133,16 +1133,60 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 <h1 id="sezione-1-funzionamento-dei-bridge" tabindex="-1"><a class="anchor" href="#sezione-1-funzionamento-dei-bridge" aria-hidden="true"><span class="octicon octicon-link"></span></a> Sezione 1: Funzionamento dei bridge</h1>
 <p>Come accennato poco fa, una delle sfide più significative nel lavorare con più reti blockchain è l'incapacità di interagire senza problemi tra di esse. Questo problema nasce dal fatto che diverse piattaforme blockchain hanno i propri protocolli, architetture e linguaggi di programmazione unici. Di conseguenza, costruire ponti tra queste reti è fondamentale per facilitare il flusso di dati, asset o smart contract.</p>
 <h2 id="lock-and-mint-bridge" tabindex="-1"><a class="anchor" href="#lock-and-mint-bridge" aria-hidden="true"><span class="octicon octicon-link"></span></a> Lock and Mint bridge</h2>
-<p>I bridge <em>lock and mint</em> sono un tipo specifico di bridge che facilita il trasferimento di asset tra diverse blockchain. Come suggerisce il nome, questi bridge prima bloccano (<em>"lock"</em>) l'asset originale in un contratto <em>"relayer"</em> designato sulla prima chain e poi coniano (<em>"mint"</em>) una copia dell'asset sulla seconda catena. Questo processo assicura che l'asset originale rimanga protetto mentre viene creata una replica sulla chain di destinazione, consentendo agli utenti di utilizzare la funzionalità dell'asset all'interno dell'ecosistema della seconda chain.</p>
+<p>I bridge <em>lock and mint</em> sono un tipo specifico di bridge che facilita il trasferimento di asset tra diverse blockchain. Come suggerisce il nome, questi bridge prima bloccano (<em>"lock"</em>) l'asset originale in un contratto <em>"relayer"</em> designato sulla prima chain e poi coniano (<em>"mint"</em>) una copia dell'asset sulla seconda chain. Questo processo assicura che l'asset originale rimanga protetto mentre viene creata una replica sulla chain di destinazione, consentendo agli utenti di utilizzare la funzionalità dell'asset all'interno dell'ecosistema della seconda chain.</p>
 <p><img src="images/bridge.png" alt="bridge.png"></p>
 <p>Per abilitare questa funzionalità dei bridge lock and mint, la comunicazione back-end svolge un ruolo fondamentale. Comporta il tracciamento degli eventi emessi dalla prima chain e l'esecuzione delle funzioni corrispondenti sui contratti distribuiti sulla seconda chain. Questa comunicazione assicura la sincronizzazione e la coerenza tra le due chain, consentendo il trasferimento senza interruzioni degli asset.</p>
 <p>Quindi ricapitolando, un bridge cross-chain può essere diviso in tre parti: source chain, cross-chain relayer e destination chain. Inoltre, il bridge cross-chain "deploya" gli smart contract sulla source chain e sulla destination chain.</p>
 <h1 id="sezione-2-vulnerabilit%C3%A0-cross-chain" tabindex="-1"><a class="anchor" href="#sezione-2-vulnerabilit%C3%A0-cross-chain" aria-hidden="true"><span class="octicon octicon-link"></span></a> Sezione 2: vulnerabilità cross-chain</h1>
-<blockquote>
-<p>Parlare delle vulnerabilità descritte da SmartAxe</p>
-</blockquote>
+<p>Esistono diverse superfici di attacco dei bridge cross-chain. I più famosi sono:
+Lato server:</p>
+<ol>
+<li>Front-end phishing: riguarda il cross-chain relayer. Se un aggressore ottiene l'accesso al front-end dei bridge, può ingannare gli utenti inducendoli a trasferire i loro fondi, con conseguente furto dei fondi degli utenti.</li>
+<li>Mishandling events: Il server recupererà e analizzerà gli eventi dalle transazioni. Se questi eventi vengono gestiti in modo non corretto, i bridge potrebbero eseguire azioni inappropriate, come inviare più denaro agli utenti di quanto desiderato. Ad esempio, se un evento di deposito registra il trasferimento di 10 ETH nella blockchain di origine viene erroneamente trattato come un trasferimento di 100 ETH, i bridge invieranno 100 ETH wrappati all'utente nella blockchain di destinazione.</li>
+</ol>
+<p>Lato smart contract:</p>
+<ol>
+<li>Problematic mint: Una volta che i token sono bloccati nella blockchain di origine, i bridge conieranno token wrappati nella blockchain di destinazione. Tuttavia, se la prova non viene convalidata in modo appropriato, gli aggressori possono coniare più token del desiderato.</li>
+<li>Fake burn: Per riportare i token nella blockchain di origine, gli utenti devono "bruciare" i token wrappati nella blockchain di destinazione. Se ci sono alcuni problemi di controllo dei permessi che consentono agli utenti di evitare il burn, gli attacchi possono verificarsi a causa di falsi burn in cui gli aggressori non bruciano nulla ma ottengono le prove di avvenuto burn.</li>
+<li>Prelievo ripetuto / illimitato: La prova di rilascio necessita di convalida prima di consentire agli utenti di prelevare i token. Tuttavia, se la prova può essere utilizzata più volte o falsificata, gli utenti possono rubare i token fino a quando le risorse non vengono esaurite.</li>
+<li>Vulnerabilità nel codice: Ad esempio sfruttando attacchi di rientranza. L'attacco di reentrancy avviene quando il contratto della vittima richiama un contratto dannoso che richiama la funzione originale nel contratto della vittima, per rubare denaro.</li>
+<li>Problemi logici: Sono causati da errori logici negli smart contract (e.g., variabile inizializzata nel modo errato).</li>
+</ol>
 <h1 id="sezione-3-smartaxe---un-primo-case-study" tabindex="-1"><a class="anchor" href="#sezione-3-smartaxe---un-primo-case-study" aria-hidden="true"><span class="octicon octicon-link"></span></a> Sezione 3: SmartAxe - un primo case study</h1>
+<p>SmartAxe è un framework innovativo progettato per rilevare vulnerabilità negli smart contract utilizzati dai bridge cross-chain. Si distingue come il primo strumento capace di identificare tali vulnerabilità sfruttando l’analisi statica a livello di bytecode. Grazie a SmartAxe, è possibile verificare automaticamente la sicurezza delle applicazioni di bridge cross-chain prima del loro rilascio, mitigando i rischi e rafforzandone la protezione.</p>
+<p>Le vulnerabilità cross-chain (CCV) affrontate da SmartAxe si dividono in due categorie principali:</p>
+<ol>
+<li>Controllo degli accessi incompleto: gli smart contract dei bridge potrebbero non implementare controlli di sicurezza adeguati o potrebbero includere errori nei meccanismi di controllo degli accessi.</li>
+<li>Inconsistenza semantica tra le chain: è fondamentale che la semantica del programma sia coerente tra la chain di origine e quella di destinazione, ad esempio per quanto riguarda il tipo e la quantità degli asset trasferiti.</li>
+</ol>
+<p>Come funziona SmartAxe:</p>
+<ol>
+<li>Analisi del flusso di controllo: SmartAxe estrae i flussi di controllo dei contratti smart di entrambe le chain utilizzando strumenti esistenti, come SmartDagger, per costruire il control flow graph (CFG) dei contratti di origine e di destinazione.</li>
+<li>Rilevamento dei problemi nel controllo degli accessi: sfruttando i dati del CFG, SmartAxe individua i vincoli di controllo degli accessi e le risorse coinvolte. Utilizzando tecniche di inferenza probabilistica, associa risorse e controlli di sicurezza, segnalando eventuali funzioni vulnerabili con controlli di accesso incompleti.</li>
+<li>Rilevamento delle incoerenze semantiche: SmartAxe allinea i flussi di controllo tra le due chain per costruire un cross-chain control flow graph (xCFG) e un cross-chain data flow graph (xDFG). Questi grafici vengono analizzati per identificare funzioni vulnerabili che presentano incoerenze semantiche. In pratica, collega i punti di uscita (opcode come CALL, STATICCALL, DELEGATECALL) dei contratti di origine ai punti di ingresso di quelli di destinazione per generare un xCFG e un xDFG.</li>
+<li>Analisi delle tracce vulnerabili: infine, SmartAxe esegue una taint analysis per tracciare le interazioni tra funzioni vulnerabili e variabili di stato globali. Se una funzione vulnerabile influisce su variabili globali tramite operazioni come SSTORE, viene segnalata come potenziale rischio.</li>
+</ol>
+<h2 id="valutazione-sperimentale" tabindex="-1"><a class="anchor" href="#valutazione-sperimentale" aria-hidden="true"><span class="octicon octicon-link"></span></a> Valutazione sperimentale</h2>
+<p>Per valutare l’efficacia di SmartAxe, gli autori hanno condotto una valutazione sperimentale utilizzando due dataset:</p>
+<ul>
+<li>Dataset di CCV etichettate manualmente: bug inseriti manualmente per testare specifiche vulnerabilità.</li>
+<li>Dataset su larga scala: contratti intelligenti reali provenienti dal mondo reale.</li>
+</ul>
+<p>SmartAxe ha raggiunto un’elevata precisione (84,95%) e un alto richiamo (89,77%) nel rilevare le vulnerabilità cross-chain.</p>
+<p>Analisi dei falsi positivi e dei falsi negativi:</p>
+<ul>
+<li>Falsi Positivi: causati principalmente dalle limitazioni dello strumento di analisi statica (SmartDagger) utilizzato per estrarre il flusso di controllo.</li>
+<li>Falsi Negativi: derivano dal fatto che SmartAxe non considera i controlli di accesso basati su query on-chain.</li>
+</ul>
 <h1 id="conclusioni" tabindex="-1"><a class="anchor" href="#conclusioni" aria-hidden="true"><span class="octicon octicon-link"></span></a> Conclusioni</h1>
+<p>SmartAxe è il primo framework capace di rilevare vulnerabilità cross-chain utilizzando l’analisi statica a livello di bytecode. Questo approccio innovativo consente di identificare vulnerabilità complesse direttamente dalla rappresentazione binaria dei contratti intelligenti, aprendo nuove strade per migliorare la sicurezza dei bridge cross-chain e delle applicazioni blockchain.</p>
+<p>Limitazioni di SmartAxe:</p>
+<ul>
+<li>La completezza di SmartAxe è minacciata dall'imprecisione dei dati di base prodotti da SmartDagger.</li>
+<li>La solidità di SmartAxe è influenzata dall'incertezza del metodo probabilistico utilizzato per l'allocazione delle risorse.</li>
+<li>Attualmente non supporta l'analisi di blockchain non EVM.</li>
+<li>Il codice non è open source.</li>
+</ul>
 
 		</main>
 	</body>
