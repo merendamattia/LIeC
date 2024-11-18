@@ -1,9 +1,7 @@
-```table-of-contents
-```
 ---
 
 # Visuale ad alto livello di astrazione
-![[01-00.png]]
+![01-00.png](images/01-00.png)
 
 Un compilatore deve rispettare i seguenti requisiti:
 - Riconoscimento di programmi validi/invalidi.
@@ -12,7 +10,7 @@ Un compilatore deve rispettare i seguenti requisiti:
 - Iterazione con il sistema operativo (e.g., linker dinamico).
 
 ## Tradizionale compilatore a due passi
-![[01-01.png]]
+![01-01.png](images/01-01.png)
 
 In un compilatore a 2 passi si vede una separazione delle responsabilità. 
 In un normale processo di compilazione il codice $L$ raggiunge la parte di **front end** ("esperto del linguaggio") che produce una **rappresentazione intermedia** (**IR**) che viene mandata alla parte di **back end** ("esperto dell'architettura"), la quale si occuperà di produrre il codice macchina $M$.
@@ -20,7 +18,7 @@ In un normale processo di compilazione il codice $L$ raggiunge la parte di **fro
 
 È possibile avere più front end e/o back end: 
 
-![[01-02.png]]
+![01-02.png](images/01-02.png)
 
 ## Linguaggio IR
 Il linguaggio IR (Intermediate Representation), è una rappresentazione intermedia utilizzata dal compilatore per descrivere il codice sorgente in una forma che sia più facilmente manipolabile e analizzabile durante le fasi di ottimizzazione e generazione del codice macchina. L'IR funge da ponte tra il front-end del compilatore, che analizza e interpreta il codice sorgente, e il back-end, che genera il codice macchina eseguibile.
@@ -43,7 +41,7 @@ Attualmente, la maggior parte dei compilatori moderni utilizza rappresentazioni 
 Il compito del front end è quello di riconoscere se i programmi (di un codice $L$) sono validi (e invalidi), segnalando errori e warning _facilmente leggibili_, per infine produrre codice IR (e strutture dati ausiliarie).
 
 ## Decomposizione del front end
-![[01-03.png]]
+![01-03.png](images/01-03.png)
 
 Il front end è diviso in 3 parti:
 - Lexer: si occupa di effettuare l'analisi lessicale, che si occupa di scannerizzare l'input, dividerlo in blocchi e produrre dei token. Riconosce (ferma sono quello che considera illegale, ma in caso di dubbio lascia passare) ed etichetta le parole contenute nell'input.
@@ -143,15 +141,15 @@ Con le seguenti abbreviazioni:
 
 L'esempio di derivazione di `x + 2 - y` (top down) sarà:
 
-![[01-07.png]]
+![01-07.png](images/01-07.png)
 
 L'esempio di parsing di `x + 2 - y` (bottom up) sarà:
 
-![[01-08.png]]
+![01-08.png](images/01-08.png)
 
 Ma questo parse tree può essere trasformato nel seguente abstract syntax tree (AST):
 
-![[01-09.png]]
+![01-09.png](images/01-09.png)
 
 ---
 
@@ -175,20 +173,20 @@ int main(int argc, char* argv[]) {
 
 Il dump dell'AST prodotto da clang sarà:
 
-![[01-10.png]]
+![01-10.png](images/01-10.png)
 
 Mentre l'AST generato utilizzando la compilazione C++ sarà: 
 
-![[01-11.png]]
+![01-11.png](images/01-11.png)
 
 ---
 
 # Il back end del compilatore
 Il back end del compilatore ha il compito di prendere la rappresentazione intermedia (IR) generata dal front end e tradurla in un linguaggio macchina $M$ specifico per l'architettura target. Questo processo coinvolge la scelta delle istruzioni più appropriate per implementare le operazioni definite dalla IR, nonché la decisione su quali valori mantenere nei registri durante l'esecuzione del codice generato. Inoltre, il back end deve garantire che il codice prodotto rispetti tutte le interfacce e i protocolli di sistema, come ad esempio la gestione delle eccezioni e il rispetto delle system call.
 
-![[01-12.png]]
+![01-12.png](images/01-12.png)
 
-![[01-13.png]]
+![01-13.png](images/01-13.png)
 
 Il back end è generalmente suddiviso in tre sottoprocessi principali:
 1. Selezione delle istruzioni: durante questa fase, il compilatore traduce le operazioni della IR in istruzioni specifiche per l'architettura target. Questo processo richiede di selezionare la sequenza di istruzioni macchina più efficiente per realizzare l'operazione desiderata, tenendo conto delle caratteristiche e delle limitazioni dell'hardware, come i set di istruzioni disponibili e la presenza di istruzioni complesse.
@@ -247,7 +245,7 @@ Il *middle end* è la componente del compilatore responsabile dell'analisi e tra
 
 Un aspetto cruciale è che il middle end deve sempre preservare la semantica del programma, garantendo che le trasformazioni effettuate non modifichino il comportamento originale del codice.
 
-![[01-14.png]]
+![01-14.png](images/01-14.png)
 
 Il processo del middle end è suddiviso in una serie di passi, spesso eseguiti più volte (iterativamente). 
 L'esecuzione iterativa viene gestita in modo tale da assicurare che il numero di iterazioni sia sempre finito.
@@ -270,7 +268,7 @@ Un singolo passo può dipendere da informazioni raccolte da altri passi e può a
 
 > Ad esempio, non passare tipi piccoli per riferimento nelle funzioni aiuta a evitare l'aliasing e rende il compilatore più efficiente nel generare codice ottimizzato.
 
-![[01-15.png]]
+![01-15.png](images/01-15.png)
 
 Altri benefici della strutturazione del compilatore:
 - Riutilizzo del front end: può essere utilizzato per implementare interpreti, offrendo una maggiore flessibilità.

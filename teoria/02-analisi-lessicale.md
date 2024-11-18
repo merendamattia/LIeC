@@ -1,22 +1,20 @@
-```table-of-contents
-```
 ---
 
 # Richiami di nozioni base dei linguaggi formali
 
-![[02-01.png]]
+![02-01.png](images/02-01.png)
 
 ## Sintassi delle espressioni regolari
 
-![[02-02.png]]
-![[02-04.png]]
+![02-02.png](images/02-02.png)
+![02-04.png](images/02-04.png)
 
 ## Semantica delle espressioni regolari
 
-![[02-03.png]]
+![02-03.png](images/02-03.png)
 > Manca l'insieme vuoto.
 
-![[02-05.png]]
+![02-05.png](images/02-05.png)
 ![02-05.png](images/02-05.png)
 
 ---
@@ -47,7 +45,7 @@
 		- come specifichiamo la costante carattere `’` ?
 - Operatori (matematici, logici, ecc.)
 - Punteggiatura (parentesi, virgola, punto e virgola, ecc.)
-	- ![[02-06.png]]
+	- ![02-06.png](images/02-06.png)
 - Commenti (singola linea, multi linea)
 	- Commento (singola linea) del C++
 		- `//[^\n]*\n`

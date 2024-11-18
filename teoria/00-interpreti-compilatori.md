@@ -1,5 +1,3 @@
-```table-of-contents
-```
 ---
 
 # Interprete (per il linguaggio $L$)
