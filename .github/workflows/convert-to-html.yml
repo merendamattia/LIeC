@@ -89,6 +89,8 @@ jobs:
 
           git checkout -b temp-branch
 
+          git pull
+
           git add artifacts/
           git commit -m "Add generated artifacts [HTML]"
 
@@ -107,4 +109,5 @@ jobs:
             This pull request has been automatically created by a GitHub Action.
             It includes the following updates:
             - File modifications
+          delete-branch: true
           
