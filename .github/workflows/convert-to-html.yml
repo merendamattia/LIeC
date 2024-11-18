@@ -88,9 +88,7 @@ jobs:
           git pull
 
           git checkout -b temp-branch
-
-          git pull origin temp-branch
-
+          
           git add artifacts/
           git commit -m "Add generated artifacts [HTML]"
 
