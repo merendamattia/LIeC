@@ -86,7 +86,6 @@ jobs:
       - name: Create a new branch and commit changes
         run: |
           git pull
-          git restore teoria/
 
           git checkout -b temp-branch
 
