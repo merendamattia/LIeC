@@ -9,7 +9,7 @@ Obiettivo di questo seminario:
 - Capire le basi della tecnologia blockchain e la sua rilevanza nella decentralized finance (DeFi).
 - Studiare le vulnerabilità più comuni nello sviluppo di smart contract cross-chain (aka bridge).
 - Scoprire come l'analisi statica insieme ad altre tecniche può aiutare ad identificare potenziali vulnerabilità e mitigare rischi nei bridge.
-- 
+
 # Introduzione
 Prima di immergerci nel mondo degli smart contract cross-chain, facciamo un passo indietro ed esploriamo in cosa consiste la tecnologia blockchain.
 
