@@ -6,22 +6,22 @@
 
 # Symposium
 Obiettivo di questo seminario:
-- Capire le basi della tecnologia blockchain e la sua rilevanza nella decentralized finance (DeFi).
+- Capire le basi della tecnologia blockchain.
 - Studiare le vulnerabilità più comuni nello sviluppo di smart contract cross-chain (aka bridge).
 - Scoprire come l'analisi statica insieme ad altre tecniche può aiutare ad identificare potenziali vulnerabilità e mitigare rischi nei bridge.
 
 # Introduzione
 Prima di immergerci nel mondo degli smart contract cross-chain, facciamo un passo indietro ed esploriamo in cosa consiste la tecnologia blockchain.
 
-In parole povere, una blockchain è un registro digitale decentralizzato che registra le transazioni su una rete di computer. La kill-feature della blockchain risiede nella sua natura trasparente e a prova di manomissione, che consente transazioni peer-to-peer sicure senza la necessità di intermediari come banche o governi.
+In parole povere, una blockchain è un registro digitale decentralizzato che registra le transazioni su una rete di computer. La kill-feature della blockchain risiede nella sua natura trasparente e a prova di manomissione, che consente transazioni peer-to-peer sicure senza la necessità di intermediari.
 
-Ma ecco il punto: non tutte le blockchain sono create uguali. Infatti, ci sono molte diverse piattaforme blockchain, ognuna con le proprie caratteristiche e casi d'uso unici. Ad esempio, Ethereum è una popolare piattaforma blockchain che consente agli sviluppatori di distribuire smart contract, programmi che si eseguono in modo autonomo quando si verifica una determinata condizione.
+Ma ecco il punto: non tutte le blockchain sono uguali. Infatti, ci sono molte diverse piattaforme blockchain, ognuna con le proprie caratteristiche e casi d'uso unici. Ad esempio, Ethereum è una popolare piattaforma blockchain che consente agli sviluppatori di distribuire smart contract, programmi che si eseguono in modo autonomo quando si verifica una determinata condizione.
 
 Poiché questi contratti sono archiviati su una blockchain, sono anche immutabili, il che significa che una volta distribuiti, non possono essere modificati o eliminati.
 
-Ora, questa immutabilità è sia un vantaggio che uno svantaggio. Da un lato, significa che gli smart contract possono fornire un elevato livello di fiducia e garanzia per le parti coinvolte in una transazione. Ma dall'altro lato, significa anche che eventuali errori o bug in questi contratti possono avere conseguenze di vasta portata: dopotutto, se un contratto intelligente contiene un errore logico, potrebbe potenzialmente portare a significative perdite finanziarie o danni alla reputazione.
+Ora, questa immutabilità è sia un vantaggio che uno svantaggio. Da un lato, significa che gli smart contract possono fornire un elevato livello di fiducia e garanzia per le parti coinvolte in una transazione. Ma dall'altro lato, significa anche che eventuali errori o bug in questi contratti possono avere conseguenze di vasta portata: dopotutto, se uno smart contract contiene un errore logico, potrebbe potenzialmente portare a significative perdite finanziarie o danni alla reputazione.
 
-Ecco perché la sicurezza è un aspetto così critico nello sviluppo dgli smart contract. Quando si distribuisce un contratto intelligente su una blockchain come Ethereum, gli sviluppatori devono essere assolutamente certi che il loro codice sia privo di errori e bug, altrimenti le conseguenze potrebbero essere gravi.
+Ecco perché la sicurezza è un aspetto così critico nello sviluppo degli smart contract. Quando si distribuisce un contratto intelligente su una blockchain come Ethereum, gli sviluppatori devono essere assolutamente certi che il loro codice sia privo di errori e bug, altrimenti le conseguenze potrebbero essere gravi.
 
 Una delle sfide significative nel lavorare con più reti blockchain è l'incapacità di trasferire in modo nativo asset tra di loro. Se hai un asset, come Ether (ETH) su Ethereum, non puoi semplicemente spostarlo ad un'altra blockchain, come la rete di Solana. Questo perché ogni blockchain ha la propria tecnologia e infrastruttura sottostante unica, rendendo impossibile il trasferimento diretto.
 
