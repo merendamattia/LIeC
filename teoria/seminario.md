@@ -2,7 +2,7 @@
 ```
 ---
 
-> Possibile titolo: *"Sicurezza negli smart contract cross-chain: sfide e possibili soluzioni"*.
+> Titolo: *"Sicurezza negli smart contract cross-chain: sfide e possibili soluzioni"*.
 
 # Symposium
 Obiettivo di questo seminario:
@@ -20,8 +20,6 @@ Ma ecco il punto: non tutte le blockchain sono uguali. Infatti, ci sono molte di
 Poiché questi contratti sono archiviati su una blockchain, sono anche immutabili, il che significa che una volta distribuiti, non possono essere modificati o eliminati.
 
 Ora, questa immutabilità è sia un vantaggio che uno svantaggio. Da un lato, significa che gli smart contract possono fornire un elevato livello di fiducia e garanzia per le parti coinvolte in una transazione. Ma dall'altro lato, significa anche che eventuali errori o bug in questi contratti possono avere conseguenze di vasta portata: dopotutto, se uno smart contract contiene un errore logico, potrebbe potenzialmente portare a significative perdite finanziarie o danni alla reputazione.
-
-Ecco perché la sicurezza è un aspetto così critico nello sviluppo degli smart contract. Quando si distribuisce un contratto intelligente su una blockchain come Ethereum, gli sviluppatori devono essere assolutamente certi che il loro codice sia privo di errori e bug, altrimenti le conseguenze potrebbero essere gravi.
 
 Una delle sfide significative nel lavorare con più reti blockchain è l'incapacità di trasferire in modo nativo asset tra di loro. Se hai un asset, come Ether (ETH) su Ethereum, non puoi semplicemente spostarlo ad un'altra blockchain, come la rete di Solana. Questo perché ogni blockchain ha la propria tecnologia e infrastruttura sottostante unica, rendendo impossibile il trasferimento diretto.
 
