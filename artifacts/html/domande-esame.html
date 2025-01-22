@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+		<title>domande-esame</title>
+		<style>
+			/* PDF Specific */
+
+@media print {
+  body {
+    min-width: initial;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* General */
+
+.octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.anchor:focus {
+  outline: none;
+}
+
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+  text-decoration: none;
+}
+
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+h1:hover .anchor .octicon-link:before,
+h2:hover .anchor .octicon-link:before,
+h3:hover .anchor .octicon-link:before,
+h4:hover .anchor .octicon-link:before,
+h5:hover .anchor .octicon-link:before,
+h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-print-color-adjust: exact;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #24292e;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 1rem auto;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+a {
+  background-color: initial;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+img {
+  border-style: none;
+}
+
+code,
+kbd,
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+input {
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  overflow: visible;
+}
+
+[type='checkbox'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: 600;
+}
+
+hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+hr:after,
+hr:before {
+  display: table;
+  content: '';
+}
+
+hr:after {
+  clear: both;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h3,
+h4 {
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h5,
+h6 {
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+blockquote {
+  margin: 0;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol ol,
+ul ol {
+  list-style-type: lower-roman;
+}
+
+ol ol ol,
+ol ul ol,
+ul ol ol,
+ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+dd {
+  margin-left: 0;
+}
+
+code,
+pre {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 12px;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+:checked + .radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+.border {
+  border: 1px solid #e1e4e8 !important;
+}
+
+.border-0 {
+  border: 0 !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e1e4e8 !important;
+}
+
+.rounded-1 {
+  border-radius: 3px !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.bg-gray-light {
+  background-color: #fafbfc !important;
+}
+
+.text-gray-light {
+  color: #6a737d !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.my-2 {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.pl-1 {
+  padding-left: 4px !important;
+}
+
+.pl-2 {
+  padding-left: 8px !important;
+}
+
+.py-2 {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.pl-3,
+.px-3 {
+  padding-left: 16px !important;
+}
+
+.px-3 {
+  padding-right: 16px !important;
+}
+
+.pl-4 {
+  padding-left: 24px !important;
+}
+
+.pl-5 {
+  padding-left: 32px !important;
+}
+
+.pl-6 {
+  padding-left: 40px !important;
+}
+
+.f6 {
+  font-size: 12px !important;
+}
+
+.lh-condensed {
+  line-height: 1.25 !important;
+}
+
+.text-bold {
+  font-weight: 600 !important;
+}
+
+.pl-c {
+  color: #6a737d;
+}
+
+.pl-c1,
+.pl-s .pl-v {
+  color: #005cc5;
+}
+
+.pl-e,
+.pl-en {
+  color: #6f42c1;
+}
+
+.pl-s .pl-s1,
+.pl-smi {
+  color: #24292e;
+}
+
+.pl-ent {
+  color: #22863a;
+}
+
+.pl-k {
+  color: #d73a49;
+}
+
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.pl-smw,
+.pl-v {
+  color: #e36209;
+}
+
+.pl-bu {
+  color: #b31d28;
+}
+
+.pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+.pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+.pl-c2:before {
+  content: '^M';
+}
+
+.pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+.pl-ml {
+  color: #735c0f;
+}
+
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+.pl-mi {
+  font-style: italic;
+  color: #24292e;
+}
+
+.pl-mb {
+  font-weight: 700;
+  color: #24292e;
+}
+
+.pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+.pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+.pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+.pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+.pl-ba {
+  color: #586069;
+}
+
+.pl-sg {
+  color: #959da5;
+}
+
+.pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.my-2 {
+  margin-bottom: 8px !important;
+}
+
+.my-2 {
+  margin-top: 8px !important;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.pl-1 {
+  padding-left: 4px !important;
+}
+
+.pl-2 {
+  padding-left: 8px !important;
+}
+
+.py-2 {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.pl-3 {
+  padding-left: 16px !important;
+}
+
+.pl-4 {
+  padding-left: 24px !important;
+}
+
+.pl-5 {
+  padding-left: 32px !important;
+}
+
+.pl-6 {
+  padding-left: 40px !important;
+}
+
+.pl-7 {
+  padding-left: 48px !important;
+}
+
+.pl-8 {
+  padding-left: 64px !important;
+}
+
+.pl-9 {
+  padding-left: 80px !important;
+}
+
+.pl-10 {
+  padding-left: 96px !important;
+}
+
+.pl-11 {
+  padding-left: 112px !important;
+}
+
+.pl-12 {
+  padding-left: 128px !important;
+}
+
+hr {
+  border-bottom-color: #eee;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+body:after,
+body:before {
+  display: table;
+  content: '';
+}
+
+body:after {
+  clear: both;
+}
+
+body > :first-child {
+  margin-top: 0 !important;
+}
+
+body > :last-child {
+  margin-bottom: 0 !important;
+}
+
+a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+blockquote,
+details,
+dl,
+ol,
+p,
+pre,
+table,
+ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h1,
+h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.875em;
+}
+
+h6 {
+  font-size: 0.85em;
+  color: #6a737d;
+}
+
+ol,
+ul {
+  padding-left: 2em;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li {
+  word-wrap: break-all;
+}
+
+li > p {
+  margin-top: 16px;
+}
+
+li + li {
+  margin-top: 0.25em;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+table th {
+  font-weight: 600;
+}
+
+table td,
+table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+img {
+  max-width: 80%;
+  box-sizing: initial;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+}
+
+pre {
+  word-wrap: normal;
+}
+
+pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  -webkit-print-color-adjust: exact;
+  background: #f8f8f8;
+}
+
+.hljs pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.hljs pre,
+pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  -webkit-print-color-adjust: exact;
+
+  border-radius: 3px;
+}
+
+pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+.commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+.full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+.blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27, 31, 35, 0.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.blob-num:hover {
+  color: rgba(27, 31, 35, 0.6);
+}
+
+.blob-num:before {
+  content: attr(data-line-number);
+}
+
+.blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 12px;
+  color: #24292e;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.pl-token.active,
+.pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+.tab-size[data-tab-size='1'] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.tab-size[data-tab-size='2'] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.tab-size[data-tab-size='3'] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.tab-size[data-tab-size='4'] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.tab-size[data-tab-size='5'] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.tab-size[data-tab-size='6'] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.tab-size[data-tab-size='7'] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.tab-size[data-tab-size='8'] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.tab-size[data-tab-size='9'] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.tab-size[data-tab-size='10'] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.tab-size[data-tab-size='11'] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.tab-size[data-tab-size='12'] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.task-list-item {
+  list-style-type: none;
+}
+
+.task-list-item + .task-list-item {
+  margin-top: 3px;
+}
+
+.task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+/*
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+*/
+  
+  .hljs-comment,
+  .hljs-quote {
+    color: #998;
+    font-style: italic;
+  }
+  
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .hljs-number,
+  .hljs-literal,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-tag .hljs-attr {
+    color: #008080;
+  }
+  
+  .hljs-string,
+  .hljs-doctag {
+    color: #d14;
+  }
+  
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-id {
+    color: #900;
+    font-weight: bold;
+  }
+  
+  .hljs-subst {
+    font-weight: normal;
+  }
+  
+  .hljs-type,
+  .hljs-class .hljs-title {
+    color: #458;
+    font-weight: bold;
+  }
+  
+  .hljs-tag,
+  .hljs-name,
+  .hljs-attribute {
+    color: #000080;
+    font-weight: normal;
+  }
+  
+  .hljs-regexp,
+  .hljs-link {
+    color: #009926;
+  }
+  
+  .hljs-symbol,
+  .hljs-bullet {
+    color: #990073;
+  }
+  
+  .hljs-built_in,
+  .hljs-builtin-name {
+    color: #0086b3;
+  }
+  
+  .hljs-meta {
+    color: #999;
+    font-weight: bold;
+  }
+  
+  .hljs-deletion {
+    background: #fdd;
+  }
+  
+  .hljs-addition {
+    background: #dfd;
+  }
+  
+  .hljs-emphasis {
+    font-style: italic;
+  }
+  
+  .hljs-strong {
+    font-weight: bold;
+  }
+		</style>
+<script> MathJax = { tex: { inlineMath: [["$", "$"]] } }; </script>
+<script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+	</head>
+	<body>
+		<nav id="table-of-contents">
+			<ul><li><a href="#studente1-30l"> Studente1 (30L)</a></li><li><a href="#studente2-28"> Studente2 (28)</a></li><li><a href="#studente3-30"> Studente3 (30)</a></li><li><a href="#studente4-28"> Studente4 (28)</a></li><li><a href="#studente5-28"> Studente5 (28)</a></li><li><a href="#studente6-21"> Studente6 (21)</a></li><li><a href="#studente7-20"> Studente7 (20)</a></li><li><a href="#studente8"> Studente8</a></li><li><a href="#studente9-30l"> Studente9 (30L)</a></li><li><a href="#studente10-30l"> Studente10 (30L)</a></li></ul>
+		</nav>
+		<main>
+			<h1 id="studente1-30l" tabindex="-1"><a class="anchor" href="#studente1-30l" aria-hidden="true"><span class="octicon octicon-link"></span></a> Studente1 (30L)</h1>
+<ul>
+<li>
+<p><strong>Quali sono gli operatori utilizzabili per definire le espressioni regolari in Flex?</strong><br>
+<em>(Esempio: <code>|</code>, <code>*</code>, <code>+</code>, <code>?</code> e così via.)</em></p>
+</li>
+<li>
+<p><strong>Spiega la sintassi delle espressioni regolari in Flex.</strong><br>
+<em>(Ad esempio, come si definiscono gruppi, classi di caratteri, o operatori come il punto per "qualsiasi carattere".)</em></p>
+</li>
+<li>
+<p><strong>Quante espressioni regolari è possibile specificare in un file Flex?</strong><br>
+<em>(Limiti teorici o pratici nel numero di regole definibili.)</em></p>
+</li>
+<li>
+<p><strong>Qual è la struttura di un file Flex?</strong></p>
+<ul>
+<li>Quali sono le principali sezioni e la loro funzione?</li>
+<li>Qual è la differenza tra due regole diverse nel file Flex?</li>
+</ul>
+</li>
+<li>
+<p><strong>Cos'è e come funziona la regola degli implicatori nel linguaggio C?</strong><br>
+<em>(Ad esempio, la gestione automatica dei tipi nei contesti specifici.)</em></p>
+</li>
+<li>
+<p><strong>Quali sono le priorità tra le espressioni regolari in Flex?</strong><br>
+<em>(Come vengono risolti conflitti tra più regex che potrebbero corrispondere allo stesso input.)</em></p>
+</li>
+<li>
+<p><strong>Dove vengono definite le parole chiave in un file Flex?</strong><br>
+<em>(Ad esempio, nell’intestazione o nella sezione delle dichiarazioni iniziali.)</em></p>
+</li>
+<li>
+<p><strong>Scrivi un esempio di definizione in Flex in cui:</strong></p>
+<ul>
+<li><code>"forza"</code> è un identificatore generico, e</li>
+<li><code>"for"</code> è una keyword con trattamento speciale.<br>
+<em>(Mostra come differenziare tra keyword e identificatori generici.)</em></li>
+</ul>
+</li>
+</ul>
+<h1 id="studente2-28" tabindex="-1"><a class="anchor" href="#studente2-28" aria-hidden="true"><span class="octicon octicon-link"></span></a> Studente2 (28)</h1>
+<ul>
+<li>
+<p><strong>Quali sono i diversi tipi di Intermediate Representation (IR)?</strong></p>
+<ul>
+<li>IR lineari</li>
+<li>IR strutturali</li>
+<li>IR ibride</li>
+</ul>
+</li>
+<li>
+<p><strong>Quando finisce un Basic Block (BB)?</strong></p>
+<ul>
+<li>Esempi di BB di entrata e BB di uscita.</li>
+<li>Regole che determinano la fine di un BB (ad esempio, istruzioni di salto o terminatori).</li>
+</ul>
+</li>
+<li>
+<p><strong>Quali sono i criteri che definiscono la fine di un Basic Block in LLVM?</strong></p>
+<ul>
+<li>Presenza di istruzioni di salto.</li>
+<li>Una <code>return</code> rappresenta il terminatore del Control Flow Graph (CFG).</li>
+</ul>
+</li>
+<li>
+<p><strong>Cosa troviamo all'interno di un modulo LLVM?</strong></p>
+<ul>
+<li>Funzioni, variabili globali, e metadati.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cosa rappresenta il Control Flow Graph (CFG) in LLVM?</strong></p>
+<ul>
+<li>Una funzione.</li>
+<li>Le analisi basate sul CFG sono dette "intraprocedurali" perché si concentrano solo sugli elementi interni alla funzione/procedura.</li>
+</ul>
+</li>
+<li>
+<p><strong>Come si chiamano le analisi che si basano sul CFG?</strong></p>
+<ul>
+<li>Analisi forward.</li>
+<li>Analisi backward.</li>
+</ul>
+</li>
+<li>
+<p><strong>Qual è il limite oltre il quale il CFG non può andare?</strong></p>
+<ul>
+<li>Il CFG non può rappresentare dipendenze tra funzioni diverse (si limita a una singola funzione).</li>
+</ul>
+</li>
+<li>
+<p><strong>Quali sono le caratteristiche principali del CFG in LLVM?</strong></p>
+<ul>
+<li>Rappresentazione di flussi di controllo.</li>
+<li>Ogni nodo del grafico rappresenta un Basic Block, e gli archi rappresentano le transizioni tra i blocchi.</li>
+</ul>
+</li>
+<li>
+<p><strong>Qual è la differenza tra codice orientato a registri (reg2reg) e codice orientato a memoria (load &amp; store)?</strong></p>
+<ul>
+<li><strong>Codice orientato a registri:</strong> le operazioni lavorano direttamente con i registri.</li>
+<li><strong>Codice orientato a memoria:</strong> le operazioni richiedono caricamenti (<code>LOAD</code>) e salvataggi (<code>STORE</code>) espliciti da e verso la memoria.</li>
+</ul>
+</li>
+<li>
+<p><strong>Qual è lo scopo delle funzioni phi in LLVM?</strong></p>
+<ul>
+<li>Implementare l'assegnazione condizionale all'interno di una rappresentazione in Static Single Assignment (SSA).</li>
+<li>Permettere la convergenza di valori da percorsi differenti in un Basic Block.</li>
+</ul>
+</li>
+<li>
+<p><strong>Fornisci un esempio in cui viene violata la Static Single Assignment (SSA).</strong></p>
+<ul>
+<li>Quando una variabile viene assegnata più volte senza essere rinominata, violando il principio di unicità delle definizioni in SSA.</li>
+</ul>
+</li>
+</ul>
+<h1 id="studente3-30" tabindex="-1"><a class="anchor" href="#studente3-30" aria-hidden="true"><span class="octicon octicon-link"></span></a> Studente3 (30)</h1>
+<ul>
+<li>
+<p><strong>Qual è lo scopo dell'analisi sintattica nei compilatori?</strong></p>
+<ul>
+<li>Verificare che il codice sorgente rispetti la grammatica del linguaggio.</li>
+<li>Costruire una rappresentazione strutturale del codice, tipicamente un albero di derivazione o un albero sintattico (AST).</li>
+</ul>
+</li>
+<li>
+<p><strong>Cos'è un parser top-down predittivo?</strong></p>
+<ul>
+<li>Un parser che analizza il codice partendo dal simbolo iniziale della grammatica e tenta di predire quali regole applicare basandosi sul prossimo simbolo in ingresso.</li>
+<li>Perché esista, la grammatica deve essere LL(1).</li>
+</ul>
+</li>
+<li>
+<p><strong>Come si elimina la ricorsione sinistra?</strong></p>
+</li>
+<li>
+<p><strong>Cosa significa per una grammatica avere la ricorsione sinistra?</strong></p>
+</li>
+<li>
+<p><strong>Cosa significa LL(1)?</strong></p>
+<ul>
+<li><strong>L:</strong> analisi Left-to-right (da sinistra a destra).</li>
+<li><strong>L:</strong> costruzione della derivazione Leftmost (la derivazione più a sinistra).</li>
+<li><strong>1:</strong> una sola lookahead token (un simbolo di anticipo) per decidere quale produzione utilizzare.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cosa sono i set FIRST e FIRST+?</strong></p>
+<ul>
+<li><strong>FIRST(X):</strong> l'insieme dei terminali che possono iniziare una stringa derivabile da ( X ).</li>
+<li><strong>FIRST+(X):</strong> l'insieme dei terminali che possono iniziare una stringa derivabile da ( X ), tenendo conto anche del simbolo successivo per risolvere ambiguità.</li>
+</ul>
+</li>
+<li>
+<p><strong>Quando una grammatica è LL(1)?</strong></p>
+<ul>
+<li>Una grammatica è LL(1) se, per ogni produzione, l'intersezione tra i set FIRST delle produzioni alternative di un simbolo non terminale è vuota, e se non c'è conflitto tra FIRST e FOLLOW per la gestione di ( $\epsilon$ ).</li>
+</ul>
+</li>
+<li>
+<p><strong>Che parser costruisce Bison?</strong></p>
+<ul>
+<li>Bison costruisce un parser bottom-up, tipicamente un parser LR(1) o LALR(1).</li>
+</ul>
+</li>
+<li>
+<p><strong>Qual è la differenza tra parser top-down e bottom-up?</strong></p>
+<ul>
+<li><strong>Top-down:</strong> inizia dal simbolo iniziale e cerca di risalire alla stringa in ingresso.</li>
+<li><strong>Bottom-up:</strong> parte dalla stringa in ingresso e cerca di ridurla al simbolo iniziale, applicando le produzioni in ordine inverso.</li>
+</ul>
+</li>
+<li>
+<p><strong>Perché l'insieme dei linguaggi LR(1) è più grande di quello dei linguaggi LL(1)?</strong></p>
+<ul>
+<li>I parser LR(1) possono gestire grammatiche più complesse, incluse quelle con ambiguità locali risolvibili mediante analisi bottom-up e lookahead.</li>
+</ul>
+</li>
+<li>
+<p><strong>Fornisci un esempio di conflitto shift-reduce.</strong></p>
+<ul>
+<li>Si verifica quando il parser non sa se eseguire una riduzione con una regola esistente o fare uno shift per analizzare il prossimo simbolo in ingresso.</li>
+</ul>
+</li>
+</ul>
+<h1 id="studente4-28" tabindex="-1"><a class="anchor" href="#studente4-28" aria-hidden="true"><span class="octicon octicon-link"></span></a> Studente4 (28)</h1>
+<ul>
+<li>
+<p><strong>Come funzionano i parser bottom-up?</strong></p>
+<ul>
+<li>Partono dalla stringa in ingresso e cercano di ricostruire il simbolo iniziale della grammatica applicando le produzioni in ordine inverso.</li>
+<li>Utilizzano una tabella con due operazioni principali:
+<ul>
+<li><strong>Shift:</strong> aggiunge un simbolo allo stack e avanza nel leggere la stringa.</li>
+<li><strong>Reduce:</strong> sostituisce una sequenza di simboli nello stack con il non terminale corrispondente secondo una produzione.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Che cos'è una handle?</strong></p>
+</li>
+<li>
+<p><strong>Differenza tra parser top-down e bottom-up:</strong></p>
+<ul>
+<li><strong>Top-down:</strong> analizza da sinistra verso destra cercando di prevedere quale produzione applicare basandosi sul lookahead (FIRST).</li>
+<li><strong>Bottom-up:</strong> analizza da sinistra verso destra, ma costruisce la derivazione al contrario utilizzando lookahead basato su FOLLOW.</li>
+<li><strong>Lookahead:</strong>
+<ul>
+<li>Top-down: controlla il primo simbolo seguente nella stringa (FIRST).</li>
+<li>Bottom-up: controlla il primo simbolo seguente il contesto della produzione (FOLLOW).</li>
+</ul>
+</li>
+<li>I parser bottom-up sono più potenti dei top-down perché possono gestire grammatiche più complesse.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cosa succede in Bison quando una grammatica è ambigua?</strong></p>
+<ul>
+<li>Bison costruisce una tabella composta da due sezioni:
+<ul>
+<li><strong>Action:</strong> specifica se fare uno shift, una reduce o segnalare un errore.</li>
+<li><strong>Goto:</strong> indica quale stato raggiungere dopo una riduzione.</li>
+</ul>
+</li>
+<li>Se la grammatica è ambigua, si verificano conflitti (e.g., shift-reduce o reduce-reduce) che vengono segnalati nel report.</li>
+</ul>
+</li>
+<li>
+<p><strong>Come può fallire la costruzione di una tabella in Bison?</strong></p>
+<ul>
+<li>Quando non è possibile risolvere i conflitti presenti nella grammatica (e.g., ambiguità non gestite).</li>
+<li>Se ci sono errori nella definizione delle regole che impediscono la costruzione corretta delle tabelle Action e Goto.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cosa possiamo trovare nel report di Bison quando si verifica un problema?</strong></p>
+<ul>
+<li>Informazioni sui conflitti rilevati, tra cui:
+<ul>
+<li>Conflitti <strong>shift-reduce</strong> (ambiguità su quale operazione eseguire).</li>
+<li>Conflitti <strong>reduce-reduce</strong> (ambiguità su quale regola ridurre).</li>
+</ul>
+</li>
+<li>Eventuali produzioni ambigue e stati problematici.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cosa sono i conflitti reduce-reduce?</strong></p>
+<ul>
+<li>Si verificano quando due o più produzioni sono applicabili per ridurre lo stesso simbolo nello stesso contesto, e il parser non sa quale scegliere.</li>
+</ul>
+</li>
+<li>
+<p><strong>Perché non puoi avere conflitti shift-shift?</strong></p>
+<ul>
+<li>Perché il simbolo successivo da leggere è uno solo, quindi il parser non può eseguire due operazioni di shift contemporaneamente.</li>
+</ul>
+</li>
+<li>
+<p><strong>Esempio di ambiguità nei linguaggi imperativi:</strong></p>
+<ul>
+<li>Ambiguità: non è chiaro a quale "if" appartiene l'"else" in presenza di "if-then-else".</li>
+</ul>
+</li>
+<li>
+<p><strong>Tre modalità per rimuovere l'ambiguità:</strong></p>
+<ul>
+<li><strong>Modificare la grammatica:</strong> riscrivere le regole per evitare ambiguità (e.g., specificando esplicitamente come associare "else").</li>
+<li><strong>Far scegliere al compilatore:</strong> utilizzare regole di precedenza e associatività per risolvere i conflitti.</li>
+<li><strong>Modificare il linguaggio di programmazione:</strong> introdurre nuove sintassi o restrizioni per eliminare situazioni ambigue (e.g., obbligare l'uso di parentesi o regole più stringenti).</li>
+</ul>
+</li>
+</ul>
+<h1 id="studente5-28" tabindex="-1"><a class="anchor" href="#studente5-28" aria-hidden="true"><span class="octicon octicon-link"></span></a> Studente5 (28)</h1>
+<ul>
+<li>
+<p><strong>Come si implementa l’astrazione procedurale nel linguaggio macchina?</strong></p>
+<ul>
+<li>Utilizzando l’<strong>activation record</strong> (detto anche record di attivazione), una struttura dati che contiene tutte le informazioni necessarie per eseguire una procedura.</li>
+<li>L’activation record include:
+<ul>
+<li>Parametri della funzione.</li>
+<li>Variabili locali.</li>
+<li>Indirizzo di ritorno.</li>
+<li>Eventuali informazioni di controllo e di gestione del contesto.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Dove si trova l’activation record?</strong></p>
+<ul>
+<li>Tipicamente è allocato nello <strong>stack</strong>, ma può essere allocato nell’<strong>heap</strong> in base alle esigenze.</li>
+</ul>
+</li>
+<li>
+<p><strong>Quando l’activation record non può stare sullo stack?</strong></p>
+<ul>
+<li>Quando il ciclo di vita della funzione chiamata supera quello della funzione chiamante.
+<ul>
+<li>Ad esempio:
+<ul>
+<li><strong>Stack:</strong> utilizzato quando il chiamato termina prima o contemporaneamente al chiamante.</li>
+<li><strong>Heap:</strong> utilizzato quando si richiede che il chiamato viva più a lungo del chiamante (e.g., callback, coroutine, o funzioni che ritornano chiusure).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Come faccio a sapere dove si trova una variabile a tempo di esecuzione se non conosco i dettagli?</strong></p>
+<ul>
+<li>Utilizzando l’<strong>offset</strong> relativo all’inizio dell’activation record.</li>
+<li>Conoscendo l’offset, è possibile risalire all’indirizzo effettivo della variabile rispetto alla base dell’activation record.</li>
+</ul>
+</li>
+<li>
+<p><strong>Classificazione del codice:</strong></p>
+<ul>
+<li><strong>Locale:</strong> operazioni e informazioni che riguardano un singolo blocco di codice o funzione.</li>
+<li><strong>Regionale:</strong> ottimizzazioni e analisi che coinvolgono un insieme di blocchi di base vicini.</li>
+<li><strong>Intraprocedurale:</strong> analisi e ottimizzazioni limitate all’interno di una singola procedura o funzione (guardo il cfg di una funzione).</li>
+<li><strong>Interprocedurale:</strong> analisi e ottimizzazioni che attraversano i confini delle funzioni, considerando chiamate e dipendenze tra procedure.</li>
+</ul>
+</li>
+<li>
+<p><strong>Che cos’è un extended basic block?</strong></p>
+<ul>
+<li>Un <strong>extended basic block (EBB)</strong> è una sequenza di istruzioni formata da un blocco base iniziale, seguito da altri blocchi che non sono punti di ingresso per salti esterni.</li>
+<li>Tutte le istruzioni di un EBB sono eseguite sequenzialmente senza salti esterni, tranne all’uscita del blocco.</li>
+<li>Permette di estendere le analisi e le ottimizzazioni oltre il singolo blocco base, mantenendo il controllo lineare sul flusso di esecuzione.</li>
+</ul>
+</li>
+</ul>
+<h1 id="studente6-21" tabindex="-1"><a class="anchor" href="#studente6-21" aria-hidden="true"><span class="octicon octicon-link"></span></a> Studente6 (21)</h1>
+<ul>
+<li>
+<p><strong>Ottimizzazioni nelle analisi interprocedurali (inlining):</strong></p>
+<ul>
+<li>L’<strong>inlining</strong> consiste nel sostituire una chiamata di funzione con il codice della funzione stessa.</li>
+<li>Permette di evitare il costo di una chiamata di funzione e rende il codice più adatto a ottimizzazioni successive.</li>
+</ul>
+</li>
+<li>
+<p><strong>Benefici dell’inlining:</strong></p>
+<ul>
+<li>Miglioramento delle prestazioni eliminando overhead delle chiamate di funzione.</li>
+<li>Maggiore opportunità per ulteriori ottimizzazioni, come:
+<ul>
+<li>Propagazione costanti.</li>
+<li>Rimozione del codice morto.</li>
+</ul>
+</li>
+<li>Riduzione della complessità del flusso di controllo a runtime.</li>
+<li><strong>Svantaggi:</strong> aumento delle dimensioni del codice (code bloat).</li>
+</ul>
+</li>
+<li>
+<p><strong>Struttura dell’activation record:</strong></p>
+<ul>
+<li>Contiene informazioni necessarie per gestire l’esecuzione di una procedura. Include:
+<ul>
+<li><strong>Parametri:</strong> passati alla funzione.</li>
+<li><strong>Register save area:</strong> spazio per salvare i registri temporanei usati durante la funzione.</li>
+<li><strong>Return value:</strong> spazio per il valore di ritorno della funzione.</li>
+<li><strong>Return address:</strong> indirizzo a cui tornare dopo aver completato la funzione.</li>
+<li><strong>Addressability:</strong> informazioni per risolvere riferimenti a variabili locali e parametri.</li>
+<li><strong>ARP (Activation Record Pointer):</strong> puntatore al record di attivazione corrente.</li>
+<li><strong>Caller’s ARP:</strong> puntatore al record di attivazione del chiamante.</li>
+<li><strong>Local variables:</strong> variabili locali della funzione.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Cosa produce Flex?</strong></p>
+<ul>
+<li>Flex genera un <strong>lexer</strong> (analizzatore lessicale) in linguaggio C.</li>
+<li>Questo lexer legge un input testuale e riconosce i token basati sulle espressioni regolari specificate nel file di configurazione.</li>
+</ul>
+</li>
+<li>
+<p><strong>Come si passa da regex a NFA (metodo di Thompson)</strong></p>
+</li>
+<li>
+<p><strong>Qual è la grammatica delle espressioni regolari?</strong></p>
+<ul>
+<li>Le espressioni regolari possono essere definite attraverso una grammatica formale:
+<ul>
+<li><em><em>R → ε | a | (R1 R2) | (R1 | R2) | (R1</em>)</em>*</li>
+<li>Dove:
+<ul>
+<li><code>ε</code> rappresenta la stringa vuota.</li>
+<li><code>a</code> è un simbolo del linguaggio.</li>
+<li><code>(R1 R2)</code> rappresenta la concatenazione di due regex.</li>
+<li><code>(R1 | R2)</code> rappresenta l’unione di due regex.</li>
+<li><code>(R1*)</code> rappresenta la chiusura di Kleene di una regex.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Come faccio a descrivere un linguaggio (con le grammatiche)?</strong></p>
+<ul>
+<li>Utilizzando una <strong>grammatica formale</strong>:
+<ul>
+<li>Una grammatica è una quadrupla G = (N, T, P, S)</li>
+</ul>
+</li>
+<li>La grammatica genera tutte e sole le stringhe appartenenti al linguaggio.</li>
+<li>Si utilizza una combinazione di produzioni per costruire le stringhe del linguaggio partendo dal simbolo iniziale.</li>
+</ul>
+</li>
+</ul>
+<h1 id="studente7-20" tabindex="-1"><a class="anchor" href="#studente7-20" aria-hidden="true"><span class="octicon octicon-link"></span></a> Studente7 (20)</h1>
+<ul>
+<li>
+<p><strong>Passaggi da regex a DFA minimizzato:</strong></p>
+<ol>
+<li><strong>Regex a NFA (metodo di Thompson)</strong></li>
+<li><strong>NFA a DFA (algoritmo subset construction)</strong></li>
+<li><strong>Minimizzazione del DFA</strong></li>
+</ol>
+</li>
+<li>
+<p><strong>Che cos’è formalmente un NFA (Non-deterministic Finite Automaton):</strong></p>
+<ul>
+<li>Un NFA è una <strong>quintupla</strong> $A = (Q, \Sigma, \delta, q_0, F)$</li>
+<li>L’NFA consente transizioni multiple o con $\epsilon$, rendendolo non deterministico.</li>
+</ul>
+</li>
+<li>
+<p><strong>Come funziona la costruzione di Thompson</strong></p>
+</li>
+<li>
+<p><strong>Cosa significa per una variabile essere viva</strong></p>
+</li>
+<li>
+<p><strong>Quando una variabile è morta</strong></p>
+</li>
+<li>
+<p><strong>Come si calcola l’insieme delle variabili vive</strong></p>
+</li>
+</ul>
+<h1 id="studente8" tabindex="-1"><a class="anchor" href="#studente8" aria-hidden="true"><span class="octicon octicon-link"></span></a> Studente8</h1>
+<ul>
+<li><strong>NFA a DFA (algoritmo subset construction)</strong></li>
+<li><strong>Minimizzazione del DFA</strong></li>
+<li>Esempio bison visto a lezione: come calcolare i valori delle costanti numeriche (con i dollari)</li>
+</ul>
+<h1 id="studente9-30l" tabindex="-1"><a class="anchor" href="#studente9-30l" aria-hidden="true"><span class="octicon octicon-link"></span></a> Studente9 (30L)</h1>
+<ul>
+<li>ancestor nell'AR</li>
+<li>scope statico</li>
+</ul>
+<h1 id="studente10-30l" tabindex="-1"><a class="anchor" href="#studente10-30l" aria-hidden="true"><span class="octicon octicon-link"></span></a> Studente10 (30L)</h1>
+<ul>
+<li>cosa c'è nel front end del compilatore</li>
+<li>come viene implementato il checker</li>
+</ul>
+
+		</main>
+	</body>
+</html>
